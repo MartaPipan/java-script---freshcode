@@ -1,28 +1,11 @@
-const isActiveUser = false;
-const result2 = numberFromDB + Number(isActiveUser);
-console.log('result =', result2);
-console.log('typeof result =', typeof result2);
-console.log(12 % 0); //NaN  
-console.log(12*'qwerty'); //NaN
 
-console.log(12 + -true); //12
+let number1 = 1;
+let number2 = 2;
 
-console.log(12 * undefined); //NaN
+console.log('prefix increment =', ++number1);
+console.log('number2 =', number2++);
+console.log('number2 =', number2);
 
-console.log(12 - NaN); //NaN
-/*
-0 -0 +0
-''
-null
-false
-*/
-/*
-1
-true
-*/
-/*
-NaN
-0/0
-n%0
-/+-*% NaN || undefined
-*/
+
+
+
