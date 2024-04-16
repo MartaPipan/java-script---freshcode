@@ -4,15 +4,24 @@ if (condition) {
 } else {
   statement2
 }
-*/
-//......34567......
+logMessage1();
+//declaration
+function logMessage1() {
+  console.log('hi, from function 1');
 
+logMessage1();  
 let number1 = 15;
 const divisor = 5;
 const minRange = 11;
 const maxRange = 16;
 
 // !(3>number1  number1<7)&& !(number1%7===0)
+
+//expression
+const logMessage2 = function () {
+  console.log('hi, from function 2');
+};
+logMessage2();
 
 // написати вираз який буде правдивим якщо число НЕ кратне 5 і(або) НЕ в діапазоні [11-16) 
 //     false                         false              false
@@ -74,3 +83,9 @@ if (0 > number1) {
 } else {
   console.log('positive or zero');
 }
+*/
+//arrow
+const logMessage3 =  () => {
+  console.log('hi, from function 3 arrow');
+};
+logMessage3();
