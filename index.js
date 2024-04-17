@@ -89,7 +89,7 @@ function exchangeSameType(value1, value2) {
         return value1
     }
     if (typeof value1 === typeof value2 && value2 > value1) {
-        return value1
+        return value2
     }
     return null;
 } 
@@ -109,8 +109,10 @@ console.log(exchangeResult3);
  */
 
 function writeUserNumber(number) {
-
-  if (number > 0) {
+    if (typeof number !== 'number' || Number.isNaN(number)) {
+        return 'is not number'
+    }
+    if (number > 0) {
       return 'positive'
     } 
     if (number === 0) {
@@ -118,9 +120,6 @@ function writeUserNumber(number) {
     } 
     if (number < 0) {
         return 'negative'
-    }
-    if (number !== 'number' || Number.isNaN(number)) {
-        return 'is not number'
     }
 }
 let writeResult1 = writeUserNumber(83);
