@@ -46,7 +46,6 @@ let result1=calculateResult(8, 15);
 console.log('result1:', result1);
 let result2=calculateResult(18, 5);
 console.log('result2:', result2);
-
 /**
 * Якщо значення змінної кратно(тобто ділиться без остачі) на 7 і одночасно кратно 3 - виводимо "you win!", інакше - "you loose"
 */
