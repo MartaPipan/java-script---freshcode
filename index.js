@@ -88,11 +88,23 @@ function exchangeSameType(value1, value2) {
     if (typeof value1 === typeof value2 && value1 > value2) {
         return value1
     }
-    if (typeof value1 === typeof value2 && value2 > value1) {
+    else if (typeof value1 === typeof value2 && value2 > value1) {
         return value2
     }
     return null;
 } 
+
+/**
+ * function exchangeSameType(value1, value2) {
+    if (typeof value1 === typeof value2)
+    if (value1 > value2) {
+        return value1
+    }
+    if (value2 > value1) {
+        return value2
+    }
+    return null;
+ */
 let exchangeResult1 = exchangeSameType(10, 7);
 console.log(exchangeResult1);
 
@@ -150,6 +162,7 @@ function isDivisorOfNumber(numberToCheck) {
     }
     return false
 }
+
 let isDivisorResult1 = isDivisorOfNumber(7);
 console.log(isDivisorResult1);
 let isDivisorResult2 = isDivisorOfNumber(2);
