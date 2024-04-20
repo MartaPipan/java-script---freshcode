@@ -1,47 +1,47 @@
 
-/** Напишіть код:
-*
-*/
+// /** Напишіть код:
+// *
+// */
 
-function calculateInvoiceForMaria(car, fruit, cloth, vegetable) {
-    let invoice = "";
+// function calculateInvoiceForMaria(car, fruit, cloth, vegetable) {
+//     let invoice = "";
     
-    // Перевіряємо, чи Марія купує цибулю
-    if (vegetable === "cebola") {
-        invoice += "cebola ";
-    }
+//     // Перевіряємо, чи Марія купує цибулю
+//     if (vegetable === "cebola") {
+//         invoice += "cebola ";
+//     }
 
-    // Перевіряємо автомобіль і додаємо до рахунку для Марії, якщо вона купує цибулю
-    switch (car) {
-        case "volvo":
-            if (fruit === "orange") {
-                invoice += "Mercedes + orange ";
-            }
-            break;
-        case "smart":
-            invoice += "smart ";
-            break;
-        default:
-            break;
-    }
+//     // Перевіряємо автомобіль і додаємо до рахунку для Марії, якщо вона купує цибулю
+//     switch (car) {
+//         case "volvo":
+//             if (fruit === "orange") {
+//                 invoice += "Mercedes + orange ";
+//             }
+//             break;
+//         case "smart":
+//             invoice += "smart ";
+//             break;
+//         default:
+//             break;
+//     }
 
-    return "Invoice for Maria: " + invoice.trim();
-}
+//     return "Invoice for Maria: " + invoice.trim();
+// }
 
-function calculateInvoiceForJorge(car) {
-    let invoice = "";
+// function calculateInvoiceForJorge(car) {
+//     let invoice = "";
     
-    // Перевіряємо автомобіль і додаємо до рахунку для Жоржа, якщо він купує автомобіль
-    if (car === "volvo" || car === "mercedes") {
-        invoice += car;
-    }
+//     // Перевіряємо автомобіль і додаємо до рахунку для Жоржа, якщо він купує автомобіль
+//     if (car === "volvo" || car === "mercedes") {
+//         invoice += car;
+//     }
 
-    return "Invoice for Jorge: " + invoice;
-}
+//     return "Invoice for Jorge: " + invoice;
+// }
 
-// Example of using the functions
-console.log(calculateInvoiceForMaria("volvo", "orange", "green", "cebola")); // Invoice for Maria: Mercedes + orange + cebola
-console.log(calculateInvoiceForJorge("volvo")); // Invoice for Jorge: volvo
+// // Example of using the functions
+// console.log(calculateInvoiceForMaria("volvo", "orange", "green", "cebola")); // Invoice for Maria: Mercedes + orange + cebola
+// console.log(calculateInvoiceForJorge("volvo")); // Invoice for Jorge: volvo
 
 
 
