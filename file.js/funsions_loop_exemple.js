@@ -1,15 +1,16 @@
-//false 0 '' null undefined
-/** ''    null      world ;
- *   0      0        NaN;
-*/    
-/**Number.isNaN(number) 
-*|| Number.isInteger(number) === false
-*/
-
 /**  тернарний
 * умова ? правдивий варіант : неправдивий варіант;
 *false 0 '' null undefined
 */
+
+//false 0 '' null undefined
+/** ''    null      world ;
+ *   0      0        NaN;
+*/
+/**Number.isNaN(number) 
+*|| Number.isInteger(number) === false
+*/
+
 //написати функцію яка перевіряє на повноліття використовуючи тернарник
 //функція приймає вік людини(число) і повертає рядок!!! 'adult'  'not adult'
 //написати функцію яка запитує у користувача ввод будь чого
@@ -106,6 +107,7 @@ switch (month) {
   default:
     console.log(error);
 }
+
 
 // loop
 // передумова і післяумова
