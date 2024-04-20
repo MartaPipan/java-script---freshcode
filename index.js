@@ -1,26 +1,17 @@
 
-// loop
-// передумова і післяумова
-
-let count = 10;
-const MAX_VALUE = 3;
-debugger
-// передумова
-while (count < MAX_VALUE) {
-  count++;
-  console.log(count);
+// loop  for передумова  
+/**for (let index = 0(inicial contador);
+ * index < array.length(condition like i < MAX_VALUE,умова ); 
+ * index++(like i++)) {
+*    const element = array[index];
+*   (um ciclo-ITERACIA;vamos criar iterator) (i-index)
+*}
+*/
+  const MAX_VALUE = 5;
+//debugger
+for (let i = 0; i < MAX_VALUE; i++) {
+    console.log(i);
 }
-
-  //післяумова
-count = 10;
-do {
-  count++;
-  console.log(count);
-} while (count < MAX_VALUE);
-//післяумова
-count = 10;
-  while (true) {
-    count++;
-    console.log(count);
-    if (count >= MAX_VALUE) break;
-  }
+for (let i = 0; i < MAX_VALUE; i++) {
+    console.log(i);
+}
