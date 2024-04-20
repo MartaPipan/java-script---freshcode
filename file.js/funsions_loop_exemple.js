@@ -149,7 +149,17 @@
 // for (let i = 0; i < MAX_VAL; i++) {
 //     console.log(i);
 // }
-//continue
+
+// запитувати в користувача пароль до тих пір, доки не введе вірний
+// const VALID_PASSWORD = 'qwerty';
+while (true) {
+    const userInputPassword = prompt('Enter password');
+    if (userInputPassword === VALID_PASSWORD) {
+        console.log('welcome');
+        break;
+    }
+
+// continue
 
 const min = 10;
 const max = 30;
