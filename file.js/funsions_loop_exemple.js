@@ -143,11 +143,11 @@ count = 10;
 *   (um ciclo-ITERACIA;vamos criar iterator) (i-index)
 *}
 */
-  const MAX_VALUE = 5;
+  const MAX_VAL = 5;
 //debugger
-for (let i = 0; i < MAX_VALUE; i++) {
+for (let i = 0; i < MAX_VAL; i++) {
     console.log(i);
 }
-for (let i = 0; i < MAX_VALUE; i++) {
+for (let i = 0; i < MAX_VAL; i++) {
     console.log(i);
 }
