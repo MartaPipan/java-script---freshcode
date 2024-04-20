@@ -1,43 +1,86 @@
-function writeUserInformation() {
-  const userInput = prompt();
-  const massage = userInput ? 'thank' : 'Error';
-  return massage
+Функція для підрахунку вартості покупок
+function calculateInvoice(car, fruit, clothes, vegetables) {
+    let totalCost = 0;
+
+    // Перевірка автомобіля та додавання вартості
+    switch (car) {
+        case 'volvo':
+            totalCost += 60000;
+            break;
+        case 'audi':
+            totalCost += 40000;
+            break;
+        case 'mercedes':
+            totalCost += 100000;
+            break;
+        case 'smart':
+            totalCost += 25000;
+            break;
+        default:
+            console.log("Недопустимий автомобіль.");
+    }
+
+    // Додавання вартості фруктів
+    switch (fruit) {
+        case 'ananas':
+            totalCost += 0.99;
+            break;
+        case 'apple':
+            totalCost += 1.29;
+            break;
+        case 'lemon':
+            totalCost += 1.69;
+            break;
+        case 'orange':
+            totalCost += 1.50;
+            break;
+        default:
+            console.log("Недопустимий фрукт.");
+    }
+
+    // Додавання вартості одягу
+    switch (clothes) {
+        case 't-shirt':
+            totalCost += 10;
+            break;
+        case 'blouse':
+            totalCost += 8;
+            break;
+        case 'dress':
+            totalCost += 12;
+            break;
+        case 'jeans':
+            totalCost += 25;
+            break;
+        default:
+            console.log("Недопустимий одяг.");
+    }
+
+    // Додавання вартості овочів (якщо є потреба)
+    switch (vegetables) {
+        case 'potato':
+            totalCost += 0.5;
+            break;
+        case 'carrot':
+            totalCost += 0.8;
+            break;
+        case 'onion':
+            totalCost += 0.6;
+            break;
+        case 'garlic':
+            totalCost += 1.0;
+            break;
+        case 'celery':
+            totalCost += 0.7;
+            break;
+        default:
+            console.log("Недопустимі овочі.");
+    }
+
+    return totalCost;
 }
 
-// function writeUserInformation = function getAnswerUserInput
+// Виклик функції та виведення результату
+let invoiceTotal = calculateInvoice('mercedes', 'orange', 't-shirt', 'onion');
+console.log("Вартість покупок складає:", invoiceTotal.toFixed(2));
 
-function getAnswerUserInput() {
-  return prompt('enter any') ? 'thank' : 'error';
-}
-//тернарний
-// умова ? правдивий варіант : неправдивий варіант;
-//false 0 '' null undefined
-
-//написати функцію яка запитує у користувача ввод будь чого
-//і повертає рядок thanks, якщо користувач щось то ввів
-//інакше повертає рядок 'Error'
-
-// 1 - вигадати ім'я для функції
-// 2 - а чи приймає функція аргументи
-// 3 - запитати данні у користувача
-// 4 - перевірити данні
-// 5 - повернути результат
-
-function getAnswerUserInput() {
-  return prompt('enter any') ? 'thanks' : 'error';
-}
-const summa =3456;
-//bad practice
-const sale = summa > 100000 ? 10 : 
-              summa > 10000 ? 5 : 
-                summa > 1000 ? 2 : 0;
-
-//good practice
-let sale2=0;
-if( summa > 100000){
-  sale2 = 10;
-} else if( summa > 10000){
-  sale2 = 5;
-} else if( summa > 1000){
-  sale2 = 2;
-}
