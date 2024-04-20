@@ -1,4 +1,4 @@
-Функція для підрахунку вартості покупок
+// Функція для підрахунку вартості покупок
 function calculateInvoice(car, fruit, clothes, vegetables) {
     let totalCost = 0;
 
