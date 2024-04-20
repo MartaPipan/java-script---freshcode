@@ -1,7 +1,7 @@
 // Функція для підрахунку вартості покупок
 function calculateInvoice(car, fruit, clothes, vegetables) {
     let totalCost = 0;
-
+}
     // Перевірка автомобіля та додавання вартості
     switch (car) {
         case 'volvo':
@@ -78,7 +78,6 @@ function calculateInvoice(car, fruit, clothes, vegetables) {
     }
 
     return totalCost;
-}
 
 // Виклик функції та виведення результату
 let invoiceTotal = calculateInvoice('mercedes', 'orange', 't-shirt', 'onion');
