@@ -4,6 +4,9 @@
 // *false 0 '' null undefined
 // */
 
+    const userNumber = prompt('Enter your number');
+    const userInputNumber = Number(userNumber); // Convert the string to a number
+
 // //false 0 '' null undefined
 // /** ''    null      world ;
 //  *   0      0        NaN;
