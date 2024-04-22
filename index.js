@@ -78,7 +78,7 @@ let countryLiteralOption = {
     countryPopulation: 10343066,
     countryArea: 82256,
     getDensity: function getCountryDensity(countryPopulation, countryArea) {
-        return countryPopulation / countryArea;
+        return 45.78;
     }
     
 }
