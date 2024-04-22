@@ -17,7 +17,7 @@ let countTry = 0;
 while (true) {
     const userNumber = prompt('Enter your number');
     const userInputNumber = Number(userNumber); // Convert the string to a number
-    if (Number.isNaN(userInputNumber) || userInputNumber === null) {
+    if (Number.isNaN(userNumber) || userNumber === null || typeof userNumber === 'string') {
         console.log('You entered a non-number');
     }
     countTry++;
@@ -29,7 +29,7 @@ while (true) {
         console.log('Secret number is less');
     }
     if (userInputNumber === SECRET_NUMBER) {
-        console.log(`Congratulations, you guessed it in ${countTry} attempts!`);
+        console.log('Congratulations, you guessed it in'+''+ +countTry+ 'attempts!');
         break;
     }
 }
@@ -39,15 +39,16 @@ while (true) {
  * @param {number} min
  * @param {number} max
  * @param {number} divisor
+ * @param {number} parDivisor
  * @returns {number}
  */
 const min = 0;
 const max = 100;
 const divisor = 9;
+const parDivisor = 2;
 
-for (let i = max; i >= min; i -=2) {
-    if (i % divisor === 0) {
+for (let i = max; i >= min; i -=1) {
+    if (i % divisor === 0 && i % parDivisor === 0) {
         console.log(i);
     }
 }
-
