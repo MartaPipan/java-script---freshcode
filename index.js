@@ -29,12 +29,18 @@ while (true) {
         console.log('Secret number is less');
     }
     if (userInputNumber === SECRET_NUMBER) {
-        console.log('Congratulations, you guessed it in ' + countTry + ' attempts!');
+        console.log(`Congratulations, you guessed it in ${countTry} attempts!`);
         break;
     }
 }
 
-// Написати скрипт, який виводить парні і кратні 9 числа з діапазону від 0 до 100 в зворотньому порядку
+/**
+ * Написати скрипт, який виводить парні і кратні 9 числа з діапазону від 0 до 100 в зворотньому порядку
+ * @param {number} min
+ * @param {number} max
+ * @param {number} divisor
+ * @returns {number}
+ */
 const min = 0;
 const max = 100;
 const divisor = 9;
