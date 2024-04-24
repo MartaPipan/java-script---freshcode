@@ -196,7 +196,7 @@ console.log(checkTriangleExist3);
 
 
 
-/**
+**
  * Створити об'єкт country двома способами: літерально та за допомогою функції конструктора
 *властивості:
 *- name (рядок)
@@ -211,21 +211,19 @@ console.log(checkTriangleExist3);
  *
  */
 let countryLiteralOption = {
-    countryName: 'Portugal',
-    countryPopulation: 10343066,
-    countryArea: 82256,
-    getDensity: function getCountryDensity(countryPopulation, countryArea) {
-        return countryPopulation / countryArea;
+    name: 'Portugal',
+    population: 10343066,
+    area: 82256,
+    getDensity: function getCountryDensity() {
+        return this.population / this.area;
     }
-    
 }
 
 function Country(nameOfCountry, population, area) {
     this.nameOfCountry = nameOfCountry;
     this.population = population;
     this.area = area;
-    this.getDensity = function getDensity(population, area) {
-        getDensity = this.population / this.area;
-        return `${this.getDensity}`;
+    this.getDensity = function () {
+        return this.population / this.area;
     }
-}
+}/
