@@ -87,6 +87,15 @@ console.log(myArrNums.push === myArrNums2.push);
 
 
 
+
+
+
+const arrNums = [];
+arrNums.push(7);
+arrNums.push(77);
+console.log(arrNums);
+const arrNums2 = [];
+console.log(arrNums.push === arrNums2.push);
 // const myArrayPrototype = {
 //   push: function (value) {
 //     this[this.length] = value;
