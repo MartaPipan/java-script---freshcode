@@ -1,94 +1,28 @@
-// const user = {
-//     fname: 'Brad',
-//     sname: 'Pit',
-//     password: 'qwerty',
-//     age = 60,
-//     isAdult = true,
-//     return: 'Hi, I\`m' + user.fname;
-// };
-// console.log(user);
-// alert();
-
-// const userTwo = {
-//     fname: 'Brad',
-//     sname: 'Pit',
-//     password: 'qwerty',
-//     age = 60,
-//     isAdult = true,
-//     return: `Hi, I'm  ${user.fname}`,
-// }
-// user.age = 60;
-// user.isAdult = true;
-
-// console.log(user.age);
-
-// delete user.password;
-// delete user.age;
-
-
-// console.log(user);
-// userVIP.isAdult = true;
-// console.log(userVIP.saySecondName());
-
-// function User(fnameValue, sname, password, age, isAdult=true) {
-//   this.fname = fnameValue;
-//   this.sname = sname;
-//   this.password = password;
-//   this.age = age;
-//   this.isAdult = isAdult;
-//   this.sayFullName = function () {
-//     return `${this.fname} ${this.sname}`;
-//   };
-//   this.getBdYear = function () {
-//     //body function
-//     return 1963;
-//   };
-//   this.showSubscribe = function () {
-//     //body function
-//     return 'you sicribe';
-//   };
-// }
-
-// console.log(user.saySecondName());
-// const user2 = new User('Brad', 'Pitt', 'qwerty', 60, true);
-// console.log(user2.sayFullName());
-
-// const user3 = new User('Alex', 'Qwety', 'qwerty', 20, true);
-// console.log(user3.sayFullName());
-
-// const user4 = new User('Tom', 'Pitt', 'qwerty', 30, true);
-// console.log(user4);
-
-// /**
- * Створити об'єкт country двома способами: літерально та за допомогою функції конструктора
-*властивості:
-*- name (рядок)
-*- population (число)
-*- area (число)
-*метод:
-*- getDensity() - повертає число 45.78
- * @param {string} name 
- * @param {number} population 
- * @param {number} area 
- * @returns {number} getDensity
- *
- */
-let countryLiteralOption = {
-    countryName: 'Portugal',
-    countryPopulation: 10343066,
-    countryArea: 82256,
-    getDensity: function getCountryDensity(countryPopulation, countryArea) {
-        return 45.78;
-    }
-    
+// пропонуємо розв'язати приклад з множення з двома випадковими числами від [0-10] до тих пір поки юзер не наведе правильну відповідь
+//вивести в промпті приклад множення з двома випадковими числами від [0-10]
+//відловити помилки '' null string wrong answer
+//якщо правильно - похвалити
+function getRandomIntInclusive(min = 0, max = 10) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
-function Country(nameOfCountry, population, area) {
-    this.nameOfCountry = nameOfCountry;
-    this.population = population;
-    this.area = area;
-    this.getDensity = function getDensity(population, area) {
-        getDensity = this.population / this.area;
-        return `${this.getDensity}`;
+function isErrorUserInputNumber(value) {
+  return value === '' || value === null || Number.isNaN(Number(value));
+}
+const MAX_AMOUNT = 300;
+for (let i = 0; i < MAX_AMOUNT; i++) {
+  const randomNumber1 = getRandomIntInclusive();
+  const randomNumber2 = getRandomIntInclusive();
+  const rightResult = randomNumber1 * randomNumber2;
+  const strTask = `Обчисліть вираз і введіть результат
+${randomNumber1} * ${randomNumber2} = `;
+  while (true) {
+    const userResult = prompt(strTask);
+    if (isErrorUserInputNumber(userResult)) {
+      continue;
     }
+    if (rightResult === Number(userResult)) {
+      alert('win');
+      break;
+    }
+  }
 }
