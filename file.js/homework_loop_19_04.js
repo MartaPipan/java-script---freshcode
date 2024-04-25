@@ -1,2 +1,0 @@
-const SECRET_NUMBER = 17;
-
