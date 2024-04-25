@@ -77,7 +77,8 @@ function createFamily() {
         let role;
         while (true) {
             role = prompt(`What is the role of family member ${i + 1}?`);
-            if (role === null ||
+            if (!(/^[a-z][a-z]*$/.test(role)) ||
+                role === null ||
                 Number.isNaN(role) ||
                 typeof role !== 'string') {
                 console.log('Please enter a valid role (not a number).');
@@ -90,7 +91,8 @@ function createFamily() {
         let name;
         while (true) {
             name = prompt(`What is the name of the ${role}?`);
-            if (name === null ||
+            if (!(/^[A-Z][a-z]*$/.test(name)) ||
+                name === null ||
                 Number.isNaN(name) ||
                 typeof name !== 'string') {
                 console.log('Invalid input. Please enter a valid name.');
