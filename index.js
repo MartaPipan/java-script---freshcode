@@ -28,16 +28,12 @@ console.log(arrNums instanceof Number);
 
 console.log(Array.isArray(arrNums));
 
-
-
-
-
 const arrNums = [];
 arrNums.push(7);
 arrNums.push(77);
 console.log(arrNums);
-const arrNums2 = [];
-console.log(arrNums.push === arrNums2.push);
+// const arrNums2 = [];
+// console.log(arrNums.push === arrNums2.push);
 
 const myArrayPrototype = {};
 myArrayPrototype.push = function (value) {
