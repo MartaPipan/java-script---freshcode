@@ -1,109 +1,36 @@
-const arrNums = [];
-arrNums.push(7);
-arrNums.push(77);
-console.log(arrNums);
-const arrNums2 = [];
-console.log(arrNums.push === arrNums2.push);
+const dayWeeks = ['sun', 'mon', 'tue', 'wen', 'thu', 'fri', 'sat'] 
+console.log(dayWeeks.pop());
+console.log(dayWeeks.pop());
+console.log(dayWeeks.pop()); 
+console.log(dayWeeks.unshift('sun', 'sun'));
+console.log(dayWeeks.push(fri));
+console.log(dayWeeks.unshift());
 
+console.log(dayWeeks.splice('sun'));
 
-const myArrayPrototype = {
-  myArrayPrototype.push = function (value) {
-    this[this.length] = value;
-    this.length++;
-    return this.length;
-  },
-};
+const divisor = Math.floor(color.length / 2);
+const color = ['red','white', 'black', 'white', 'pink', 'aqua']
+console.log(color.splice(2, 0, 'green'));
+console.log(color.splice(-1, 1, 'blue'));
+console.log(color.splice(1, 0, 'mangenta','fucsia'));
+console.log(color.splice(-3));
 
-//конструктор для прототипу:   + FORMULA PUSH
-function MyArrayPrototype() {
-  this.push = function (value) {
-    this[this.length] = value;
-    this.length++;
-    return this.length;
-  };
-}
-//конструктор для данних (для сутності інстанса)
-function MyArray() {
-  this.length = 0;
-}
+console.log(color);
+console.log(color.indexOf('red'));
+console.log(color.lastIndexOf('white'));
 
-MyArray.prototype = myArrayPrototype;
+const elem = 7;
 
-// зв'язок між конструктором для данних та об'єктом проптотипу
-MyArray.prototype = new MyArrayPrototype();
+const fromIndex = 2;
+const arrNum3 = [1, 2, 5, 7, 78, 8, 9, 60, 98, 92];
+const indexFirstElement = arrNum3.indexOf(elem, fromIndex); //vou começar ver apartir de index 4
+const indexLastElement = arrNum3.lastIndexOf(elem, fromIndex); //from index, se necessario! começa pesquisar em reverse(de fim para inicio)
 
-const myArrNums = new MyArray();
-myArrNums.push(20);
-myArrNums.push(33);
-console.log(myArrNums);
-const myArrNums2 = new MyArray();
-myArrNums2.push(1000);
-console.log(myArrNums.push === myArrNums2.push);
+const arrNum3Copy = arrNum3.slice(); // criamos copia de arrNum3, novo all array
+arrNum3Copy.splice(0, 1, 77);// igual:
+arrNum3Copy[0] = 77;
 
-
-
-//конструктор для прототипу
-function MyArrayPrototype() {
-  this.push = function (value) {
-    this[this.length] = value;
-    this.length++;
-    return this.length;
-  };
-}
-//конструктор для данних (для сутності інстанса)
-function MyArray() {
-  this.length = 0;
-}
-// зв'язок між конструктором для данних та об'єктом проптотипу
-MyArray.prototype = new MyArrayPrototype();
-
-
-const userFunc = {
-  getFullName: function () {
-    return `${this.fname} ${this.sname}`;
-  },
-  getInfo: function () {
-    return `${this.sname}, years old ${this.age}`;
-  },
-};
-
-const user1 = {
-  fname: 'Brad',
-  sname: 'Pitt',
-  age: 60,
-};
-user1.__proto__ = userFunc;
-
-const user2 = {
-  fname: 'Tom',
-  sname: 'Rot',
-  age: 59,
-  __proto__: userFunc,
-};
-
-
-
-
-function User(fname, sname, age) {
-  this.fname = fname;
-  this.sname = sname;
-  this.age = age;
-}
-
-function UserPrototype() {
-  this.sayHello = function (){
-    return `hello , I'm  ${this.fname}`;
-  }
-  this.getFullName = function () {
-    return `${this.fname} ${this.sname}`;
-  };
-  this.getInfo = function () {
-    return `${this.sname}, years old ${this.age}`;
-  };
-}
-
-User.prototype = new UserPrototype();
-
-const user3 = new User('Anna', 'Zeferino', 23);
-const user4 = new User('Maria', 'Fox', 23);
+const startIndex = 3;
+const endIndex = 7;
+const arrNum3CopyPart = arrNum3.slice(1);// copia apartir de startIndex
 

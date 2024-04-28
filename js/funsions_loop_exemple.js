@@ -15,6 +15,43 @@
 // *|| Number.isInteger(number) === false
 // */
 
+const userName = 'Maria';   // 1
+function createUserName1(name) {
+    const result = name.toUpperCase();
+    return result;
+}
+function createUserName(name) {
+    return name.toUpperCase();    // 2
+}
+//const userName = createUserName();
+const updatedName = createUserName(userName);   // 3
+console.log(userName);      // 4
+
+
+
+//FUNCTION DECLARATION
+function sayHello(greetings) {
+    alert(greetings);
+}
+sayHello('Bonjour')
+
+// FUNCTION EXPRESSION
+const sayHello2 = function(greetings) {
+    alert(greetings);
+}
+sayHello2('ola')
+    
+// METHOD OBJECT
+const car = {
+    speed: 100,
+    color: white,
+    drive: function () {
+       return 'i drive very fast!' 
+    }
+}
+const greetings = car.drive();
+console.log(greetings);
+
 // //написати функцію яка перевіряє на повноліття використовуючи тернарник
 // //функція приймає вік людини(число) і повертає рядок!!! 'adult'  'not adult'
 // //написати функцію яка запитує у користувача ввод будь чого
