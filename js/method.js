@@ -35,14 +35,36 @@ toLowerCase(); //result:   hi maria, how are you?
 // (4) ['Hello', 'my', 'dear', 'friend']
 
 
+indexFirstElement()
 
 
 
 
+Array.of()
+Array.of(element1)
+Array.of(element1, element2)
+Array.of(element1, element2, /* …, */ elementN)
 
 indexOf()
-//екземплярів повертає перший індекс, за яким даний елемент можна знайти в масиві, або -1,якщо його немає.
+indexOf(searchElement)
+indexOf(searchElement, fromIndex)
+// повертає перший індекс, за яким даний елемент можна знайти в масиві, або -1,якщо його немає.
 const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+
+console.log(beasts.indexOf('bison'));
+// Expected output: 1
+
+// Start from index 2
+console.log(beasts.indexOf('bison', 2));
+// Expected output: 4
+
+console.log(beasts.indexOf('giraffe'));
+// Expected output: -1
+
+lastIndexOf()
+//lastIndexOf(elem, fromIndex); começa pesquisar em reverse (de fim para inicio)
+
+
 
 console.log(beasts.indexOf('bison'));
 // Expected output: 1
