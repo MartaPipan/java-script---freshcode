@@ -81,6 +81,9 @@ push()
 beasts.push('rabbit');
 beasts.push('chickens', 'cats', 'dogs');
 
+pop()
+beasts.pop();
+
 unshift()
 //додає  вказані елементи на початок масиву та повертає нову довжину масиву.
 beasts.unshift('wolf', 'fox')
@@ -210,3 +213,9 @@ console.log(num3.toFixed); //result num3 = 68;
 console.log(num3 - num4);  //result 67.78990 - 0 = 67.78990;
 
 
+
+const userSubscriber = ['user1', 'user2', 'user3', 'user4', 'user5', 'user6', 'user7', 'user8', 'user9', 'user10', 'user11', 'user12', 'user13', 'user14', 'user15', 'user16', 'user17', 'user18', 'user19', 'user20', 'user21', 'user22', 'user23', 'user24', 'user25', 'user26', 'user27', 'user28'];
+const congratsIfMoreThan100 = userSubscriber;
+if (userSubscriber.length > 100) {
+    alert('WELCOME!');
+}

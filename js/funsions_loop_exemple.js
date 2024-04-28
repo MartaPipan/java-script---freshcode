@@ -15,6 +15,92 @@
 // *|| Number.isInteger(number) === false
 // */
 
+let subscriber = [
+    { user1: 'Andrew', isFriend: true },
+    { user2: 'Igor', isFriend: true },
+    { user3: 'Sarah', isFriend: false }, 
+    { user4: 'Jessica', isFriend: false },
+    { user5: 'Francisco', isFriend: true },
+    { user6: 'Tatiana', isFriend: true },
+    { user7: 'Clara', isFriend: true },
+    { user8: 'Maria', isFriend: true }];
+    
+function congratsIfMoreThan100 (userSubscriber) {
+    if (userSubscriber.length > 100) {
+        alert('WELCOME!');
+    } else {
+        alert('Not enough')
+    }
+}
+congratsIfMoreThan100(userSubscriber);
+
+
+/**
+  JS LOOPS:
+-for
+-for of 
+-for in
+-while
+-do while
+*/
+
+
+//for
+for (let i = 0; index < subscriber.length; i++) {
+    // index===0
+    // index < subscriber.length ===true
+    // index+=1 like index++  (index+1)
+    console.log(subscriber[i]); 
+}
+//for of   ( == for)
+for (const item of subscriber) {
+    console.log(item);
+}
+//for in  ()
+const obj = {
+    name: Vitaliy,
+    age: 18,
+    sex: 'male',
+    hobby: 'football'
+} 
+   
+for (const age in obj) {
+   console.log(obj.age);
+}
+/** 
+for (const age in obj) {
+    if (Object.hasOwnProperty.call(obj, age)) {
+        const element = object[age]; 
+    }
+}
+console.log(`${age}: ${obj[age]}`);
+ */ 
+
+//while
+let i = 0;
+while (i < subscriber.length) {
+    console.log(subscriber[i]);
+    i++;
+}
+
+//do while
+do {
+    console.log(subscriber[i]); 
+    i++;
+} while (i<subscriber.length);
+
+let arr = [1, 2, 3, 4, 5, 6, 7]
+let index = 0;
+function squareArr(arr) {
+    for (let index = 0; index < arr.length; index++) {   
+        const element = Math.sqrt(arr[index]);
+    }
+}
+
+
+
+
+
 const userName = 'Maria';   // 1
 function createUserName1(name) {
     const result = name.toUpperCase();
@@ -219,7 +305,11 @@ console.log(greetings);
     //    if (number%divisor) {
     //        number++;
     //        continue;
-    //     } 
+    //     }
     //     console.log(number);
     //     number++;
     // }
+
+    
+
+
