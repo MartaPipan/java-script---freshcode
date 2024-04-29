@@ -1,4 +1,4 @@
-//pop, push, shift, unshift, slice, splice, foreach(196), indexOf, lastIndexOf
+//pop, push, shift, unshift, slice, splice, foreach(196), includes(270), some(276), indexOf, lastIndexOf
 pop()
 //видаляє останній елемент із масиву та повертає цей елемент. Цей метод змінює довжину масиву.
 
@@ -23,6 +23,15 @@ splice()
 forEach()
 //виконує надану функцію один раз (за послідовністю) для кожного елемента масиву
 
+incluides()
+//INCLUDES визначає, чи містить масив певне значення серед своїх записів, повертаючи true чи false відповідно in console
+
+some()
+//перевіряє, чи принаймні один елемент у масиві проходить перевірку, реалізовану наданою функцією. Він повертає true, якщо в масиві знаходить елемент, для якого надана функція повертає true; інакше він повертає false. Це не змінює масив.
+
+EVERY()
+//перевіряє, чи всі елементи в масиві проходять перевірку, реалізовану наданою функцією.Він повертає логічне значення.
+    
 indexOf()
 //екземплярів повертає перший індекс, за яким даний елемент можна знайти в масиві, або -1,якщо його немає.
 
@@ -267,6 +276,25 @@ let num4 = null;
 console.log(num3.toFixed); //result num3 = 68;
 console.log(num3 - num4);  //result 67.78990 - 0 = 67.78990;
 
+//INCLUDES визначає, чи містить масив певне значення серед своїх записів, повертаючи true чи false відповідно in console
+const arrNum10 = [1, 5, 9, 4, 6];
+console.log(arrNum10.includes(56)); // key===
+console.log(arrNum10.includes('5'));   //key '5'!== 5 //false
+console.log(arrNum10.includes(5));     //key5 === 5 in object // true
+
+
+//SOME
+//EXAMPLE1
+console.log(arrNum10.some(function (element) { return element > 10 })); //false for arrNum10
+console.log(arrNum10.some(function (element) { return element === 6 })); // true
+
+//EXAMPLE2
+arrNum10.some(function (element) {
+    return element % 3 === 0;
+});
+
+//EVERY
+перевіряє, чи всі елементи в масиві проходять перевірку, реалізовану наданою функцією. Він повертає логічне значення.
 
 
 const userSubscriber = ['user1', 'user2', 'user3', 'user4', 'user5', 'user6', 'user7', 'user8', 'user9', 'user10', 'user11', 'user12', 'user13', 'user14', 'user15', 'user16', 'user17', 'user18', 'user19', 'user20', 'user21', 'user22', 'user23', 'user24', 'user25', 'user26', 'user27', 'user28'];

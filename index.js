@@ -1,51 +1,25 @@
-const arrNum = [4, 8, 2, 3, 6, 7]
-/** 
-for (let index = 0; index < arrNum.length; index++) {
-    const element = arrNum[index];
-    if (element%2) {
-        console.log(element);
-    }
-}
-for (let index = 0; index < arrNum.length; index++) {
-    console.log(arrNum[index]**2); 
-}
-*/
 
-forEach()
-const arrNum1 = [4, 8, 2, 3, 6, 7]
-//EXAMPLE1
-//STEP1
-function logOdd(element) {
-    if (element%2) {
-        console.log(element);
-    }
-}
-//STEP2
-arrNum1.forEach(logOdd);
-//STEP3
-arrNum1.forEach(function(element) {console.log(element%2)})
-
-//EXAMPLE2
-//STEP1
-function logPow2(element) {
-    console.log(element**2);
-}
-//STEP2
-arrNum1.forEach(logPow2);
-//STEP3
-arrNum1.forEach(function(element) {console.log(element**2)})
+//INCLUDES визначає, чи містить масив певне значення серед своїх записів, повертаючи true чи false відповідно in console
+const arrNum10 = [1, 5, 9, 4, 6];
+console.log(arrNum10.includes(56)); // key===
+console.log(arrNum10.includes('5'));   //key '5'!== 5 //false
+console.log(arrNum10.includes(5));     //key5 === 5 in object // true
 
 
-const users = [
-    { id: 100, login: 'qwer1', isMale: true },
-    { id: 200, login: 'qnjker', isMale: true },
-    { id: 101, login: 'qwenmnr', isMale: false },
-    { id: 178, login: 'qw86er', isMale: false },
-    { id: 10, login: 'qweeadr', isMale: true },
-    { id: 111, login: 'qwesaaszr', isMale: true },
-]
-users.forEach(function(user) {
-    user.isSubscribe = true;
-        user.wichList = [];
-})
-console.table(users);
+//SOME
+//перевіряє, чи принаймні один елемент у масиві проходить перевірку, реалізовану наданою функцією. Він повертає true, якщо в масиві знаходить елемент, для якого надана функція повертає true; інакше він повертає false. Це не змінює масив.
+//comfirmar se existe element >10
+console.log(arrNum10.some(function (element) { return element > 10 })); //false for arrNum10
+console.log(arrNum10.some(function (element) { return element === 6 })); // true
+
+arrNum10.some(function (element) {
+    return element % 3 === 0;
+});
+
+//EVERY
+перевіряє, чи всі елементи в масиві проходять перевірку, реалізовану наданою функцією.Він повертає логічне значення.
+if arrNum10.every(function name(element) {
+    returnelement > 6; 
+}) {
+    console.log('10%');
+}
