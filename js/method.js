@@ -1,4 +1,4 @@
-pop, push, shift, unshift, slice, splice, foreach, indexOf, lastIndexOf
+//pop, push, shift, unshift, slice, splice, foreach(196), indexOf, lastIndexOf
 pop()
 //видаляє останній елемент із масиву та повертає цей елемент. Цей метод змінює довжину масиву.
 
@@ -19,6 +19,9 @@ slice()
 splice()
 //змінює вміст масиву шляхом видалення або заміни існуючих елементів та/або додавання нових елементів на місці .
 
+
+forEach()
+//виконує надану функцію один раз (за послідовністю) для кожного елемента масиву
 
 indexOf()
 //екземплярів повертає перший індекс, за яким даний елемент можна знайти в масиві, або -1,якщо його немає.
@@ -189,6 +192,30 @@ const myFish = ["angel", "clown", "mandarin", "sturgeon"];
 const removed = myFish.splice(2);
 // myFish is ["angel", "clown"]
 // removed is ["mandarin", "sturgeon"]
+
+forEach()
+const arrNum1 = [4, 8, 2, 3, 6, 7]
+//EXAMPLE1
+//STEP1
+function logOdd(element) {
+    if (element%2) {
+        console.log(element);
+    }
+}
+//STEP2
+arrNum1.forEach(logOdd);
+//STEP3
+arrNum1.forEach(function(element) {console.log(element%2)})
+
+//EXAMPLE2
+//STEP1
+function logPow2(element) {
+    console.log(element**2);
+}
+//STEP2
+arrNum1.forEach(logPow2);
+//STEP3
+arrNum1.forEach(function(element) {console.log(element**2)})
 
 
 
