@@ -1,54 +1,32 @@
-
-//INCLUDES визначає, чи містить масив певне значення серед своїх записів, повертаючи true чи false відповідно in console
 const arrNum10 = [1, 5, 9, 4, 6];
-console.log(arrNum10.includes(56)); // key===
-console.log(arrNum10.includes('5'));   //key '5'!== 5 //false
-console.log(arrNum10.includes(5));     //key5 === 5 in object // true
+// FILTER
+//створює копію частини даного масиву, відфільтровану лише до елементів із даного масиву, які проходять перевірку, реалізовану наданою функцією.
 
-
-//SOME
-//перевіряє, чи принаймні один елемент у масиві проходить перевірку, реалізовану наданою функцією. Він повертає true, якщо в масиві знаходить елемент, для якого надана функція повертає true; інакше він повертає false. Це не змінює масив.
-//comfirmar se existe element >10
-console.log(arrNum10.some(function (element) { return element > 10 })); //false for arrNum10
-console.log(arrNum10.some(function (element) { return element === 6 })); // true
-
-arrNum10.some(function (element) {
-    return element % 3 === 0;
+const newArrNum10 = arrNum10.filter(function (element) {
+    return element > 3;
 });
+console.log(arrNum10);
+console.log(newArrNum10);
 
-//EVERY
-//перевіряє, чи всі елементи в масиві проходять перевірку, реалізовану наданою функцією.Він повертає логічне значення.
-if (arrNum10.every(function name(element) {
-    return element > 6;
+const users = [
+    { id: 100, login: 'qwerr', isMale: true },
+    { id: 200, login: 'qseipor', isMale: true },
+    { id: 101, login: 'opklda', isMale: false },
+    { id: 178, login: 'robvear', isMale: false },
+    { id: 10, login: 'gumilo', isMale: true }, 
+]
+users.forEach(function(user) {
+    user.isSubscribe = Math.random()>0.5
 })
-){ console.log('10%') }
+console.table(users);
 
-
-//FIND 
-//повертає перший елемент у наданому масиві, який задовольняє надану функцію тестування. Якщо жодне значення не задовольняє тестову функцію, undefinedповертається.
-
-console.log(
-    arrNum10.find(function (element) {
-    return element > 3;
+const userWithSubscribe = users.filter(function (user) {
+    return user.isSubscribe === true;
 })
-);
+console.table(userWithSubscribe);
 
-console.log(
-    arrNum10.findIndex(function (element) {
-    return element > 3;
+//escolher womans de  users
+const userWomans = users.filter(function (user) {
+    return user.isMale===false;
 })
-);
-
-console.log(
-    arrNum10.findLast(function (element) {
-    return element > 3;
-})
-);
-console.log(
-    arrNum10.findLastIndex(function (element) {
-    return element >3;
-})
-);
-
-
-
+console.table(userWomans);

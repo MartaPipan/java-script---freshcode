@@ -1,4 +1,4 @@
-//pop, push, shift, unshift, slice, splice, foreach(196), includes(270), some(276),find(282) indexOf, lastIndexOf
+//pop, push, shift, unshift, slice, splice, foreach(196), includes(270), some(276),find(282), filter(); indexOf, lastIndexOf
 pop()
 //видаляє останній елемент із масиву та повертає цей елемент. Цей метод змінює довжину масиву.
 
@@ -35,10 +35,20 @@ EVERY()
 FIND ()
 //повертає перший елемент у наданому масиві, який задовольняє надану функцію тестування. Якщо жодне значення не задовольняє тестову функцію, undefined повертається.
 
-
-
+FILTER()
+//створює копію частини даного масиву, відфільтровану лише до елементів із даного масиву, які проходять перевірку, реалізовану наданою функцією.
 
     
+
+
+
+
+
+
+
+
+
+
 indexOf()
 //екземплярів повертає перший індекс, за яким даний елемент можна знайти в масиві, або -1,якщо його немає.
 
@@ -288,7 +298,38 @@ if (arrNum10.every(function name(element) {
 
 //FIND 
 //повертає перший елемент у наданому масиві, який задовольняє надану функцію тестування. Якщо жодне значення не задовольняє тестову функцію, undefinedповертається.
+console.log(
+    arrNum10.find(function (element) {
+    return element > 3;
+})
+);
 
+console.log(
+    arrNum10.findIndex(function (element) {
+    return element > 3;
+})
+);
+
+console.log(
+    arrNum10.findLast(function (element) {
+    return element > 3;
+})
+);
+console.log(
+    arrNum10.findLastIndex(function (element) {
+    return element >3;
+})
+);
+
+// FILTER
+//створює копію частини даного масиву, відфільтровану лише до елементів із даного масиву, які проходять перевірку, реалізовану наданою функцією.
+const arrNum11 = [1, 5, 9, 4, 6];
+
+const newArrNum10 = arrNum10.filter(function (element) {
+    return element > 3;
+});
+console.log(arrNum10);
+console.log(newArrNum10);
 
 
 
