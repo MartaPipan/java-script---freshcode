@@ -1,4 +1,4 @@
-//pop, push, shift, unshift, slice, splice, foreach(196), includes(270), some(276), indexOf, lastIndexOf
+//pop, push, shift, unshift, slice, splice, foreach(196), includes(270), some(276),find(282) indexOf, lastIndexOf
 pop()
 //видаляє останній елемент із масиву та повертає цей елемент. Цей метод змінює довжину масиву.
 
@@ -31,6 +31,13 @@ some()
 
 EVERY()
 //перевіряє, чи всі елементи в масиві проходять перевірку, реалізовану наданою функцією.Він повертає логічне значення.
+
+FIND ()
+//повертає перший елемент у наданому масиві, який задовольняє надану функцію тестування. Якщо жодне значення не задовольняє тестову функцію, undefined повертається.
+
+
+
+
     
 indexOf()
 //екземплярів повертає перший індекс, за яким даний елемент можна знайти в масиві, або -1,якщо його немає.
@@ -253,8 +260,52 @@ users.forEach(function(user) {
     user.isSubscribe = true;
     user.wichList = [];
 })
-console.table(users)
+console.table(users);
 
+//INCLUDES визначає, чи містить масив певне значення серед своїх записів, повертаючи true чи false відповідно in console
+const arrNum10 = [1, 5, 9, 4, 6];
+console.log(arrNum10.includes(56)); // key===
+console.log(arrNum10.includes('5'));   //key '5'!== 5 //false
+console.log(arrNum10.includes(5));     //key5 === 5 in object // true
+
+
+//SOME
+//EXAMPLE1
+console.log(arrNum10.some(function (element) { return element > 10 })); //false for arrNum10
+console.log(arrNum10.some(function (element) { return element === 6 })); // true
+
+//EXAMPLE2
+arrNum10.some(function (element) {
+    return element % 3 === 0;
+});
+
+//EVERY
+//перевіряє, чи всі елементи в масиві проходять перевірку, реалізовану наданою функцією. Він повертає логічне значення.
+if (arrNum10.every(function name(element) {
+    return element > 6;
+})
+){ console.log('10%') }
+
+//FIND 
+//повертає перший елемент у наданому масиві, який задовольняє надану функцію тестування. Якщо жодне значення не задовольняє тестову функцію, undefinedповертається.
+
+
+
+
+
+
+
+
+
+
+
+
+
+const userSubscriber = ['user1', 'user2', 'user3', 'user4', 'user5', 'user6', 'user7', 'user8', 'user9', 'user10', 'user11', 'user12', 'user13', 'user14', 'user15', 'user16', 'user17', 'user18', 'user19', 'user20', 'user21', 'user22', 'user23', 'user24', 'user25', 'user26', 'user27', 'user28'];
+const congratsIfMoreThan100 = userSubscriber;
+if (userSubscriber.length > 100) {
+    alert('WELCOME!');
+}
 
 // STRING method exemple:
 'hello'.toUpperCase()    //----method.toUpperCase----- result='HELLO';
@@ -275,37 +326,3 @@ let num3 = 67.78990;
 let num4 = null;
 console.log(num3.toFixed); //result num3 = 68;
 console.log(num3 - num4);  //result 67.78990 - 0 = 67.78990;
-
-//INCLUDES визначає, чи містить масив певне значення серед своїх записів, повертаючи true чи false відповідно in console
-const arrNum10 = [1, 5, 9, 4, 6];
-console.log(arrNum10.includes(56)); // key===
-console.log(arrNum10.includes('5'));   //key '5'!== 5 //false
-console.log(arrNum10.includes(5));     //key5 === 5 in object // true
-
-
-//SOME
-//EXAMPLE1
-console.log(arrNum10.some(function (element) { return element > 10 })); //false for arrNum10
-console.log(arrNum10.some(function (element) { return element === 6 })); // true
-
-//EXAMPLE2
-arrNum10.some(function (element) {
-    return element % 3 === 0;
-});
-
-//EVERY
-перевіряє, чи всі елементи в масиві проходять перевірку, реалізовану наданою функцією. Він повертає логічне значення.
-
-
-const userSubscriber = ['user1', 'user2', 'user3', 'user4', 'user5', 'user6', 'user7', 'user8', 'user9', 'user10', 'user11', 'user12', 'user13', 'user14', 'user15', 'user16', 'user17', 'user18', 'user19', 'user20', 'user21', 'user22', 'user23', 'user24', 'user25', 'user26', 'user27', 'user28'];
-const congratsIfMoreThan100 = userSubscriber;
-if (userSubscriber.length > 100) {
-    alert('WELCOME!');
-}
-
-
-
-
-
-
-

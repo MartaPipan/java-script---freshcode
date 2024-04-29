@@ -17,9 +17,38 @@ arrNum10.some(function (element) {
 });
 
 //EVERY
-перевіряє, чи всі елементи в масиві проходять перевірку, реалізовану наданою функцією.Він повертає логічне значення.
-if arrNum10.every(function name(element) {
-    returnelement > 6; 
-}) {
-    console.log('10%');
-}
+//перевіряє, чи всі елементи в масиві проходять перевірку, реалізовану наданою функцією.Він повертає логічне значення.
+if (arrNum10.every(function name(element) {
+    return element > 6;
+})
+){ console.log('10%') }
+
+
+//FIND 
+//повертає перший елемент у наданому масиві, який задовольняє надану функцію тестування. Якщо жодне значення не задовольняє тестову функцію, undefinedповертається.
+
+console.log(
+    arrNum10.find(function (element) {
+    return element > 3;
+})
+);
+
+console.log(
+    arrNum10.findIndex(function (element) {
+    return element > 3;
+})
+);
+
+console.log(
+    arrNum10.findLast(function (element) {
+    return element > 3;
+})
+);
+console.log(
+    arrNum10.findLastIndex(function (element) {
+    return element >3;
+})
+);
+
+
+
