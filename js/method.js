@@ -1,4 +1,4 @@
-pop, push, shift, unshift, slice, splice, indexOf, lastIndexOf
+pop, push, shift, unshift, slice, splice, foreach, indexOf, lastIndexOf
 pop()
 //видаляє останній елемент із масиву та повертає цей елемент. Цей метод змінює довжину масиву.
 
