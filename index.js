@@ -36,4 +36,16 @@ arrNum1.forEach(logPow2);
 arrNum1.forEach(function(element) {console.log(element**2)})
 
 
-
+const users = [
+    { id: 100, login: 'qwer1', isMale: true },
+    { id: 200, login: 'qnjker', isMale: true },
+    { id: 101, login: 'qwenmnr', isMale: false },
+    { id: 178, login: 'qw86er', isMale: false },
+    { id: 10, login: 'qweeadr', isMale: true },
+    { id: 111, login: 'qwesaaszr', isMale: true },
+]
+users.forEach(function(user) {
+    user.isSubscribe = true;
+        user.wichList = [];
+})
+console.table(users);
