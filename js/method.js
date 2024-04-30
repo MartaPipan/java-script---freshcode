@@ -390,7 +390,7 @@ console.log(users);
 
 //Exercise1     /=Exercise2/
 //recolher logins dos homens
-const men = users.map(function (user) {
+const men = users.filter(function (user) {
     return user.isMale;
 })
 console.table(men);
