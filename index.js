@@ -1,125 +1,99 @@
+const books = [
+{ title: "1984", author: "Джордж Оруелл", genre: "Соціальна фантастика", pages: 328 },
+{ title: "Колгосп тварин", author: "Джордж Оруелл", genre: "Соціальна фантастика", pages: 286 },
+{ title: "Гаррі Поттер і філософський камінь", author: "Дж. К. Роулінг", genre: "Фентезі", pages: 256 },
+{ title: "Гаррі Поттер і таємна кімната", author: "Дж. К. Роулінг", genre: "Фентезі", pages: 336 },
+{ title: "Гаррі Поттер і в'язень Азкабану", author: "Дж. К. Роулінг", genre: "Фентезі", pages: 448 },
+{ title: "Гаррі Поттер і келих вогню", author: "Дж. К. Роулінг", genre: "Фентезі", pages: 608 },
+{ title: "Гаррі Поттер і орден Фенікса", author: "Дж. К. Роулінг", genre: "Фентезі", pages: 864 },
+{ title: "Гаррі Поттер і Принц-півкров", author: "Дж. К. Роулінг", genre: "Фентезі", pages: 704 },
+{ title: "Гаррі Поттер і смертельні реліквії", author: "Дж. К. Роулінг", genre: "Фентезі", pages: 608 },
+{ title: "Франкенштейн", author: "Мері Шеллі", genre: "Жахи", pages: 280 },
+{ title: "Три товариші", author: "Еріх Марія Ремарк", genre: "Роман", pages: 592 },
+{ title: "Матильда", author: "Роальд Даль", genre: "Дитяча література", pages: 240 },
+{ title: "Маленький принц", author: "Антуан де Сент-Экзюпери", genre: "Філософська проза", pages: 96 },
+{ title: "Триумфальна арка", author: "Еріх Марія Ремарк", genre: "Роман", pages: 515 },
+{ title: "Американський психопат", author: "Брет Істон Елліс", genre: "Художній роман", pages: 399 },
+{ title: "Коротка історія часу", author: "Стивен Гокінг", genre: "Наукова література", pages: 256 },
+{ title: "Заводи", author: "Тед Х'юз", genre: "Історія", pages: 672 },
+{ title: "Смерть в Венеції", author: "Томас Манн", genre: "Психологічний роман", pages: 128 },
+{ title: "Вікторія", author: "Дейв Ітонс", genre: "Альтернативна історія", pages: 592 },
+{ title: "Таємниці Старого Норвегії", author: "Дерек Б. Міллер", genre: "Фентезі", pages: 656 },
+{ title: "Дивна смерть", author: "Пол К. Фейр", genre: "Детектив", pages: 384 },
+{ title: "Війна майбутнього", author: "Герберт Йенс", genre: "Наукова фантастика", pages: 384 },
+{ title: "Думка", author: "Стівен Кінг", genre: "Жахи", pages: 432 },
+{ title: "Воно", author: "Стівен Кінг", genre: "Жахи", pages: 502 },
+]
 
+// 1) Поверніть перший об'єкт з жанру Роман   ---find
 
-/**
- * Написати функцію, яка буде повертати об'єкт родина.
-*Ключ - член родини
-*Значення - ім'я
-*В родині повинно бути як мінімум 2 особи, можна запитати в користувача скільки особ в його родині.
-*І всі данні (і ключ і значення) вносяться через prompt
-*const family = {
-*    'mather': 'Olena',
-*    'cat': 'Ray',
-*}
- * @param {number} numberOfMembers
- * @param {string} role
- * @param {string} nome
- * @returns {Object} family
- */
+console.log(
+    books.find(function (book) {
+    return book.genre ==='Роман';
+})
+);
 
+// 2) Поверніть останній індекс об'єкту з жанру Роман   findLastIndex
+console.log(
+    books.findLastIndex(function (book) {
+    return book.genre ==='Роман';
+})
+);
 
-function createFamily() {
-    let numberOfMembers;
-    while (true) {
-        const input = prompt('How many members are there in your family?');
-        numberOfMembers = Number(input);
-        if (input === null || isNaN(numberOfMembers) || numberOfMembers < 2) {
-            console.log('Please enter a valid number (minimum 2).');
-        } 
-        else {
-            break;
-        }
-    }
-    const family = {};
-    for (let i = 0; i < numberOfMembers; i++) {
-        let role;
-        while (true) {
-           role = prompt(`What is the role of family member ${i + 1}?`);
-            if (!(/^[a-z][a-z]*$/.test(role)) ||
-                role === null) {
-                console.log('Please enter a valid role (not a number).');
-            }
-            else {
-                break;
-            }
-        }
+// 3) Поверніть масив книг з жанром Фентезі де кількість сторінок більше 600
+const fantasyMore600Pages = books
+    .filter(function (book) {
+        return book.genre === 'Фентезі';
+    })
+    .map(function (book) {
+        return book.pages > 600;
+    })
+console.log(fantasyMore600Pages);
 
-        let name;
-        while (true) {
-            name = prompt(`What is the name of the ${role}?`);
-            if (!(/^[A-Z][a-z]*$/.test(name)) ||
-                name === null){
-                console.log('Invalid input. Please enter a valid name.');
-            }
-            else {
-                break;
-            }
-        }
+// 4) Поверніть масив з назв книг
+const bookTitles = books.
+    map(function (book) {
+        return book.title
+})
+console.log(bookTitles);
 
-        family[role] = name;
-    }
-    return family;
+// 5) Напишіть функцію, яка приймає аргументи: масив книг books, автора і жанр, і повертає масив назв книг(переданого автора і жанру) 
+
+function getBookTitlesByAuthorAndGenre(books, author, genre) {
+    return books
+        .filter(function(book) {
+            return book.author === author && book.genre === genre;
+        })
+        .map(function(book) {
+            return book.title;
+        });
 }
-const family = createFamily();
-console.log(family);
 
+const booksByAuthorAndGenre = getBookTitlesByAuthorAndGenre(books, author, genre);
+console.log(booksByAuthorAndGenre);
 
+// 6) Порахуйте кількість книг з жанром Фентезі (треба фільтром отримати новий масив і дістати його довжину)
+const fantasyBooks = books
+    .filter(function (book) {
+        return book.genre === 'Фентезі';
+    })
 
-/**Початковий список покупок 
-const shoppingList = ["milk", "eggs", "bread"];
-Всі завдання виконувати в наведеному порядку, після кожного завдання логувати отриманий результат
-Використовувати лише перелічені методи: pop, push, shift, unshift, slice, splice, indexOf, lastIndexOf
-- Додайте новий елемент в кінець списку 
-- Видаліть останній елемент зі списку
-- Додайте новий елемент на початок списку 
-- Видаліть перший елемент зі списку
-- Створіть повну копію списку покупок 
-- Знайдіть індекс  "bread"
-- Заменіть "bread" на "muffin"
-- Знайдіть індекс  "bread" останнє входження
-- Після молока додайте "meat", "fish"
-- Видаліть "eggs"
-*/
+const countFantasyBooks = fantasyBooks.length;
+console.log(countFantasyBooks);
 
-const shoppingList = ['milk', 'eggs', 'bread'];
-//Додайте новий елемент в кінець списку    (push; splice)
-console.log(shoppingList.push('cookies'));
-//console.log(shoppingList.splice(-1,0,'cookies'));
+// 7) Порахуйте кількість книг з кількість сторінок від 200 до 400
+const books200to400 = books
+    .filter(function (book) {
+        return book.pages >= 200 && book.pages <= 400;
+    })
+const countBooks200to400 = books200to400.length;
+console.log(countBooks200to400);
 
-// Видаліть останній елемент зі списку
-console.log(shoppingList.pop());
-//console.log(shoppingList.splice(-1,1));
-//console.log(shoppingList(shoppingList.length, 1));
+// 8) Знайдіть книжку з найменшою кількістю сторінок (треба відсортувати та вивести елемент з індеком 0)
 
-//Додайте новий елемент на початок списку 
-console.log(shoppingList.unshift('potato'));
-//console.log(shoppingList.splice(0,0,'potato'));
-
-// Видаліть перший елемент зі списку
-console.log(shoppingList.shift());
-//console.log(shoppingList.splice(0, 1));
-
-//Створіть повну копію списку покупок 
-const shoppingListCopy = shoppingList.slice()
-console.log(shoppingListCopy);
-
-//Знайдіть індекс  "bread"
-console.log(shoppingList.indexOf('bread'));
-
-//Заменіть "bread" на "muffin"
-console.log(shoppingList.splice(2, 1, 'muffin'));
-
-//Знайдіть індекс  "bread" останнє входження
-console.log(shoppingList.lastIndexOf('bread'));
-
-//Після молока додайте "meat", "fish"
-console.log(shoppingList.splice(0, 0, 'meat', 'fish'));
-
-//Видаліть "eggs"
-//console.log(shoppingList);     in console: (5) ['meat', 'fish', 'milk', 'eggs', 'muffin']
-console.log(shoppingList.splice(-2, 1));
-
-/**or 
-console.log(shoppingList.indexOf('eggs'));     in console: index3
-console.log(shoppingList.splice(3, 1));
-*/
-
+const sortedBooks = function(book1, book2) {
+    return book1.pages - book2.pages;
+}
+books.sort(sortedBooks);
+const bookWithMinPages = books[0];
+console.log(bookWithMinPages, sortedBooks[0]);
