@@ -1,4 +1,4 @@
-
+const COLORS = ['red', 'gray', 'rainbow'];
 class Squirrel {
     /**
      * @param{string} name;
@@ -6,12 +6,11 @@ class Squirrel {
       */
     // #name;
     // #color;
-
-    // const COLOR = ['red', 'gray', 'rainbow'];
+    
 
     constructor(name, color) {
-        this._name = name;
-        this._color = color;
+        this.name = name;
+        this.color = color;
     }
     
     get name() {
@@ -30,7 +29,6 @@ class Squirrel {
         this._color;
     }
     set color(value) {
-        const COLORS = ['red', 'gray', 'rainbow']
         if (typeof value !== 'string') {
             throw new TypeError('Value most be string');
         }
@@ -62,25 +60,22 @@ class FlySquirrel extends Squirrel{
 
     constructor(name, color, maxFlyLength) {
         super(name, color);
-        this._maxFlyLength = maxFlyLength;
+        this.maxFlyLength = maxFlyLength;
     }
    
     get maxFlyLength() {
         this._maxFlyLenght;
     }
     set  maxFlyLength(value) {
-        if (typeof value !== 'number' && value < 0) {
+        if (typeof value !== 'number') {
             throw new TypeError('Value most be positive number');
         }
-        if (value > 0 && value <= 50) {
+        if (value <= 50) {
             throw new RangeError('Max fly length must be greater than 50');
         }
         this._maxFlyLength = value;
     }
 
-     jump() {
-        return`${this._name} jumping`;
-    }
     fly() {
         return `${this._name} flying at max  ${this._maxFlyLength} length`;
     }
@@ -103,35 +98,28 @@ class MagicSquirrel extends FlySquirrel{
     //const WORDS = ['I', 'am', 'a', 'magic', 'squirrel'];
     constructor(name, color, maxFlyLength, words) {
         super(name, color, maxFlyLength);
-        this._words = words;
+        this.words = words;
     }
     get words() {
         this._words;
     }
     set words(value) {
-        const WORDS = ['I', 'am', 'a', 'magic', 'squirrel'];
-        if (typeof value !== 'string') {
-            throw new TypeError('Value most be a string');
-        }
-         if (WORDS !== Array.isArray && WORDS.incluides(value) === false) {
-            throw new RangeError('Words does not exists');
+         if (Array.isArray(value) === false) {
+            throw new TypeError('Words must be Array');
         }
         this._words = value;
     }
-    jump() {
-        return`${this._name} jumping`;
-    }
-    fly() {
-        return `${this._name} flying at max ${this._maxFlyLength} length`;
-    }
+
     say() {
-        return 'I am a magic squirrel'
+        return this._words.join(' ');
     }
 
 }
 try {
-    const squirrel3 = new MagicSquirrel('Banckly', 'gray', 73);
+    const words = ['I', 'am', 'a', 'magic', 'squirrel'];
+    const squirrel3 = new MagicSquirrel('Banckly', 'gray', 73, words);
     console.log(squirrel3.jump()+', '+squirrel3.fly()+' and say: '+squirrel3.say()+'!');
 } catch (error) {
     console.error(error);
-    }
+}
+    
