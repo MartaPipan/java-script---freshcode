@@ -231,7 +231,7 @@ class Cylinder extends Figeure3D{
     }
 }
 
-const getAreaFigeure3D = (figure) => {
+const getVolume3DFigure = (figure) => {
     figure.getArea()
     if (figure instanceof Figeure3D) {
         return figure.getArea()
@@ -244,9 +244,9 @@ const cube = new Cube(12);
 const cylinder = new Cylinder(3, 5);
 
 try {
-    console.log(getAreaFigeure3D(sphere));
-    console.log(getAreaFigeure3D(cube));
-    console.log(getAreaFigeure3D(cylinder)); 
+    console.log(getVolume3DFigure(sphere));
+    console.log(getVolume3DFigure(cube));
+    console.log(getVolume3DFigure(cylinder)); 
 } catch (error) {
     console.error(error);
 }
