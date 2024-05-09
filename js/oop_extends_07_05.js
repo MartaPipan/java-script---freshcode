@@ -18,7 +18,7 @@ class Squirrel {
     }
     set name(value) {
         if (typeof value !== 'string') {
-            throw new TypeError('Value most be a string');
+            throw new TypeError('Value must be a string');
         }
         if (value.langth < 3) {
             throw new RangeError('Name must be at last 3 characters long');
@@ -39,6 +39,10 @@ class Squirrel {
     }
     jump() {
         return `${this._name} jumping`;
+        
+    }
+    sayHello() {
+        return `${this._name}!`;
     }
 }
 
@@ -46,6 +50,7 @@ class Squirrel {
 try {
     const squirrel1 = new Squirrel('Maggi', 'rainbow');
     console.log(squirrel1.jump());
+    console.log(squirrel1.sayHello());
 } catch (error) {
     console.error(error);
 }
@@ -118,8 +123,9 @@ class MagicSquirrel extends FlySquirrel{
 try {
     const words = ['I', 'am', 'a', 'magic', 'squirrel'];
     const squirrel3 = new MagicSquirrel('Banckly', 'gray', 73, words);
-    console.log(squirrel3.jump()+', '+squirrel3.fly()+' and say: '+squirrel3.say()+'!');
+    console.log(squirrel3.jump() + ', ' + squirrel3.fly() + ' and say: ' + squirrel3.say() + '!');
 } catch (error) {
     console.error(error);
+    
 }
     

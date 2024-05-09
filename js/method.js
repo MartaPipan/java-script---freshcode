@@ -1,5 +1,5 @@
 // pop, push, shift, unshift, slice, splice, foreach(196), includes(270), some(276),find(282), filter(), 
-// map(), sort(), indexOf, lastIndexOf
+// map(), sort(), indexOf, lastIndexOf, at
 pop()
 //видаляє останній елемент із масиву та повертає цей елемент. Цей метод змінює довжину масиву.
 
@@ -52,6 +52,10 @@ indexOf()
 toUpperCase()    //----method.toUpperCase----- result='HELLO';
 
 toLowerCase(); //result:   hi maria, how are you?
+
+At()
+//Метод at()екземплярів Arrayприймає ціле значення та повертає елемент із цим індексом, враховуючи додатні та від’ємні цілі числа. Від’ємні цілі числа починаються від останнього елемента в масиві.
+
 
 'Hello my dear friend'.split() // method.split()------result: ['Hello my dear friend']------result:
 // (20)['H', 'e', 'l', 'l', 'o', 'm', 'y', 'd', 'e', 'a', 'r', 'f', 'r', 'i', 'e', 'n', 'd']
@@ -441,6 +445,26 @@ console.table(products);
 //є версією методу для sort() . Він повертає новий масив з елементами, відсортованими в порядку зростання.
 const newArrNum22 = arrNum22.toSorted(compareNumbers)     
 console.log(arrNum22);
+
+
+//at
+//Метод at()екземплярів Arrayприймає ціле значення та повертає елемент із цим індексом, враховуючи додатні та від’ємні цілі числа. Від’ємні цілі числа починаються від останнього елемента в масиві.
+// Our array with items
+const cart = ["apple", "banana", "pear"];
+
+// A function which returns the last item of a given array
+function returnLast(arr) {
+  return arr.at(-1);
+}
+
+// Get the last item of our array 'cart'
+const item1 = returnLast(cart);
+console.log(item1); // 'pear'
+
+// Add an item to our 'cart' array
+cart.push("orange");
+const item2 = returnLast(cart);
+console.log(item2); // 'orange'
 
 
 
