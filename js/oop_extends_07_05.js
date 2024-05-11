@@ -20,7 +20,7 @@ class Squirrel {
         if (typeof value !== 'string') {
             throw new TypeError('Value must be a string');
         }
-        if (value.langth < 3) {
+        if (value.length < 3) {
             throw new RangeError('Name must be at last 3 characters long');
         }
         this._name = value;

@@ -153,7 +153,7 @@ const numb = 12321;
 //2.method split
 //3. reduce = summa
 
-//
+/** 
 const numbStr = numb.toString();
 const numbStr2 = String(numb);
 //split
@@ -163,35 +163,40 @@ console.log(arrNumberSymb);
 const summa = arrNumberSymb.reduce((accumulator, item) => accumulator + Number(item), 0);
 //accumulator=summa from 0, if item is number = we have summa
 console.log(summa);
-//expected 9
+*/
 
 const sumDigitsOfNumber = (numb) => {
     const numberStr = number.toString();
-    const arrNumberSymb = numbStr.split('');
-    const summa = arrNumberSymb.reduce((accumulator, item) => accumulator + Number(item), 0);
+    const arrNumber = numStr.split('');
+    const summa = arrNumber.reduce((accumulator, item) => accumulator + Number(item), 0);
     return summa;
 }
-//const sumDigitsOfNumber = const sumDigitsOfNumber1
 
-const sumDigitsOfNumber1 = (number = 111) => 
-    number
-        .toString()
-        .split('')
-        .reduce((sum, item) => sum + Number(item), 0);
-
-console.log(sumDigitsOfNumber1(1023001));
-console.log(sumDigitsOfNumber1(52301401));
 
 //const sumDigitsOfNumber = const sumDigitsOfNumber1 = const sumDigitsOfNumber2
-
-const sumDigitsOfNumber2 = function (number = 0) {
+const sumDigitsOfNumber1 = function (number = 0) {
     return number
         .toString()
         .split('')
         .reduce((sum, item) => sum + Number(item), 0);
 }
-console.log(sumDigitsOfNumber2(4329754400));
-console.log(sumDigitsOfNumber2(1320023010));
+console.log(sumDigitsOfNumber1(4329754400));
+console.log(sumDigitsOfNumber1(1320023010));
+
+/**
+ * 
+ * @param {number} number 
+ * @returns {number} summa
+ */
+//const sumDigitsOfNumber = const sumDigitsOfNumber1
+const sumDigitsOfNumber2 = (number = 111) => 
+    number
+        .toString()
+        .split('')
+        .reduce((sum, item) => sum + Number(item), 0);
+
+console.log(sumDigitsOfNumber2(1023001));
+console.log(sumDigitsOfNumber2(52301401));
 
 
 
@@ -345,6 +350,11 @@ console.log(filteredStrings3);
 /**
  * 2) Є масив з рядками. Залиште в цьому масиві тільки ті рядки, які закінчуються на .html
  */
+
+/**
+ *  @param {Array} fileNames
+ *  @returns {Array} htmlFiles
+ */
 const fileNames = [
 "index.html",
 "styles.css",
@@ -392,6 +402,7 @@ console.log(newWords1);
 const newLine = newWords1.join(' '); 
 console.log(newLine);
 
+
 //3.1 =====>
 const strLine = 'abcde abcde abcde abcde';
 // Розділяємо рядок на слова за допомогою пробілу
@@ -403,8 +414,11 @@ const newStr = wordsNew.join(' ');
 console.log(newStr);
 
 
-
 //3.2 =====>
+/** 
+ * @param {string} str
+ * @returns {string} strLin
+ */
 const newStra = (str) => str
     .split(' ')
     .map((word) => '!' + word.slice(1))
@@ -443,10 +457,17 @@ function countVowels(expression) {
 }
 const expression = 'Believe you can and you are halfway there';
 const vowelsCount = countVowels(expression);
-console.log('The number of vowels equals: ' +vowelsCount);
+console.log('The number of vowels equals: ' + vowelsCount);
 
 
 // 4.1=====>
+/**
+ * 
+ * @param {string} expression 
+ * @param {array} vowels
+ * @param {array} newExpression
+ * @returns {number} count
+ */
 function countVowels1(expression) {
     const vowels = ['a', 'o', 'i', 'e', 'u'];
     const newExpression = expression.toLowerCase();

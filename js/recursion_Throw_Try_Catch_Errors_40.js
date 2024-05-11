@@ -138,7 +138,12 @@ getDivider(24,23) -> 1
 *написати таку ж функцію але без рекурсії, а з застосуванням циклу
  */
 
-
+/**
+ * 
+ * @param {number} num1 
+ * @param {number} num2 
+ * @returns {number}
+ */
 function getDivider(num1, num2) {
     if (typeof num1 !== 'number' || typeof num2 !== 'number') {
         throw new TypeError('number must be number');
@@ -163,6 +168,12 @@ try {
     console.error(error);
 }
 
+
+/**
+ * @param {number} num1 
+ * @param {number} num2 
+ * @returns {number}
+ */
 function euclideanAlgorithm(num1, num2) {
     if (typeof num1 !== 'number' || typeof num2 !== 'number') {
         throw new TypeError('Numbers must be numbers');
