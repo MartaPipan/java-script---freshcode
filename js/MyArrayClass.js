@@ -13,7 +13,7 @@ function MyArrayPrototype() {
   };
 }
 
-pop(fun) {
+pop(function) {
     if (this.length === 0) {
         return
      }
@@ -21,9 +21,9 @@ pop(fun) {
    this.length--;
   return LastItem;
   
-    forEach(func){
+    forEach(function){
         if (typeof !== 'function') {
-            throw new TypeError(type have be function)
+          throw new TypeError(type have be function);
   }
         for (let index = 0; index < this.length; index++) {
             const element = array[index];
